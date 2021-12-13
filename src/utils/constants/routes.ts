@@ -1,0 +1,3 @@
+export enum NavRoutes {
+  Home = '/'
+}
