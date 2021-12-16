@@ -1,3 +1,5 @@
 export enum NavRoutes {
-  Home = '/'
+  HOME = '/',
+  SEARCH = '/search',
+  EVENTS = '/search/events'
 }

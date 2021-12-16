@@ -4,10 +4,11 @@ import { Home } from './router/Home';
 import { NavRoutes } from './utils/constants';
 
 const App: React.FC = () => {
+
   return (
     <>
       <Routes>
-        <Route path={NavRoutes.Home} element={<Home />} />
+        <Route path={NavRoutes.HOME} element={<Home />} />
       </Routes>
     </>
   );
