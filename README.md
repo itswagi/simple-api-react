@@ -18,3 +18,7 @@
 
 1. Files are named according to their main responsibility
 
+## Future Features
+1. Use Router to update url as user moves between layouts. Will allow user to then copy paste a link and get results immediately
+2. Add animations on layout shifts
+
