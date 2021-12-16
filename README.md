@@ -11,7 +11,7 @@
 2. `components` contains all reuseable components
 3. `router` contains main level pages
 4. `state` contains your context store
-5. `utils` contains all helper functions and constant required throughout the app
+5. `utils` contains all helper functions and constants required throughout the app
 6. `__test__` contains unit tests for all the components
 
 ## Naming Convention
