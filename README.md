@@ -3,9 +3,7 @@
 ## Running the Project
 
 1. Clone the repo and perform a `yarn install` to instal all package dependencies.
-2. Add a .env file in the root directory
-  a. Setup an environment variable called REACT_APP_SERVER_URL with the api link appended with /artists. i.e. www.link.com/artists/
-  b. Setup a variable called REACT_APP_API_ID with your API_ID
+2. Add a .env file in the root directory. Setup an environment variable called REACT_APP_SERVER_URL with the api link appended with /artists. i.e. www.link.com/artists/. Setup a variable called REACT_APP_API_ID with your API_ID
 3. Use the `yarn start` script to start up the application
 
 ## Directory Structure
