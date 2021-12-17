@@ -50,14 +50,6 @@ export const SearchBar: React.FC = () => {
     }
   }, [dispatch, getValues, search, searchParams, setSearchParams]);
 
-  // useEffect(() => {
-  //   const name = searchParams.get('artist');
-  //   const searchedTerm = getValues('name');
-  //   if (name !== searchedTerm && search === ActionType.IDLE) {
-  //     name && searchArtistAPI(dispatch, { name: name });
-  //   }
-  // }, [dispatch, getValues, search, searchParams, setValue]);
-
   return (
     <SearchBarContainer
       onSubmit={handleSubmit(onSubmit)}
