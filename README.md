@@ -1,7 +1,7 @@
 # Getting Started with this Assignment
 
 ## Deployed Version
-Access the deployed frontend on `https://kt-assignment.herokuapp.com`
+Access the deployed frontend on `https://kt-assignment.herokuapp.com`(https://kt-assignment.herokuapp.com)
 This is deployed on Heroku
 
 ## Running the Project
