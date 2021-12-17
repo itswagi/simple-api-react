@@ -23,4 +23,4 @@ This is deployed on Heroku
 1. Files are named according to their main responsibility
 
 ## Future Features
-2. Add animations on layout shifts
+1. Add animations on layout shifts
