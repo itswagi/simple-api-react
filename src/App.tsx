@@ -4,7 +4,6 @@ import { Home } from './router/Home';
 import { NavRoutes } from './utils/constants';
 
 const App: React.FC = () => {
-
   return (
     <>
       <Routes>
@@ -12,6 +11,6 @@ const App: React.FC = () => {
       </Routes>
     </>
   );
-}
+};
 
 export default App;

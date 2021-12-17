@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { breakpoints } from "../../utils/constants";
+import styled from 'styled-components';
+import { breakpoints } from '../../utils/constants';
 
 export const HomeContainer = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ export const HomeContainer = styled.div`
   flex-grow: 1;
   overflow-x: hidden;
   padding: 20px 0;
-`
+`;
 
 export const SearchWrapper = styled.div`
   max-width: 100%;
@@ -18,27 +18,27 @@ export const SearchWrapper = styled.div`
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  @media ${breakpoints.xs}{
-    max-width: 540px
+  @media ${breakpoints.xs} {
+    max-width: 540px;
   }
-  @media ${breakpoints.sm}{
-    max-width: 720px
+  @media ${breakpoints.sm} {
+    max-width: 720px;
   }
-  @media ${breakpoints.md}{
-    max-width: 720px
+  @media ${breakpoints.md} {
+    max-width: 720px;
   }
   @media ${breakpoints.lg} {
-    max-width: 960px
+    max-width: 960px;
   }
   @media ${breakpoints.xl} {
-    max-width: 1100px
+    max-width: 1100px;
   }
-`
+`;
 
 export const SearchBarWrapper = styled.div`
   max-width: 500px;
   width: 100%;
-`
+`;
 
 export const EventsWrapper = styled.div`
   display: flex;
@@ -47,4 +47,4 @@ export const EventsWrapper = styled.div`
   margin: 0 auto;
   width: 100%;
   padding: 20px;
-`
+`;

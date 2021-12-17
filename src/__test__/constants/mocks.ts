@@ -1,4 +1,4 @@
-import { ActionType } from "../../utils/constants/context";
+import { ActionType } from '../../utils/constants/context';
 
 export const mockStateValue2 = {
   data: {
@@ -10,8 +10,8 @@ export const mockStateValue2 = {
         venue: {
           country: 'country1',
           city: 'city1',
-          name: 'venue1'
-        }
+          name: 'venue1',
+        },
       },
       {
         id: '2',
@@ -19,8 +19,8 @@ export const mockStateValue2 = {
         venue: {
           country: 'country2',
           city: 'city2',
-          name: 'venue2'
-        }
+          name: 'venue2',
+        },
       },
     ],
   },
@@ -29,16 +29,16 @@ export const mockStateValue2 = {
     events: ActionType.IDLE,
   },
   error: {
-    search: null
-  }
-}
+    search: null,
+  },
+};
 
 export const mockStateValue1 = {
   data: {
     search: {
       name: 'Adele',
-    facebook_page_url: 'www',
-    image_url: 'img'
+      facebook_page_url: 'www',
+      image_url: 'img',
     },
     events: [],
   },
@@ -47,6 +47,6 @@ export const mockStateValue1 = {
     events: ActionType.IDLE,
   },
   error: {
-    search: null
-  }
-}
+    search: null,
+  },
+};

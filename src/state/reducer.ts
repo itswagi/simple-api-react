@@ -1,45 +1,45 @@
-import { ActionType } from "../utils/constants/context"
-import { State, Action } from "./types"
+import { ActionType } from '../utils/constants/context';
+import { State, Action } from './types';
 
-export const appReducer = (state: State, action: Action) => {
+export const appReducer = (state: State, action: Action): State => {
   switch (action.type) {
     case ActionType.LOADING: {
       return {
         ...state,
         status: {
           ...state.status,
-          [action.status]: ActionType.LOADING
-        }
-      }
+          [action.status]: ActionType.LOADING,
+        },
+      };
     }
     case ActionType.FULFILLED: {
       return {
         ...state,
         data: {
           ...state.data,
-          ...action.payload
+          ...action.payload,
         },
         status: {
           ...state.status,
-          [action.status]: ActionType.FULFILLED
-        }
-      }
+          [action.status]: ActionType.FULFILLED,
+        },
+      };
     }
     case ActionType.REJECTED: {
       return {
         ...state,
         status: {
           ...state.status,
-          [action.status]: ActionType.REJECTED
+          [action.status]: ActionType.REJECTED,
         },
         error: {
           ...state.error,
-          [action.status]: action.error
-        }
-      }
+          [action.status]: action.error,
+        },
+      };
     }
     default: {
-      throw new Error(`Unhandled action type: ${action.type}`)
+      throw new Error(`Unhandled action type: ${action.type}`);
     }
   }
-}
+};

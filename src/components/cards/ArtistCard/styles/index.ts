@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { breakpoints } from "../../../../utils/constants";
+import styled from 'styled-components';
+import { breakpoints } from '../../../../utils/constants';
 
 export const SearchResultCardsCol = styled.div`
   display: flex;
@@ -8,21 +8,21 @@ export const SearchResultCardsCol = styled.div`
   max-width: 100%;
   flex: 1 1 100%;
 
-@media ${breakpoints.sm} {
-  max-width: 50%;
-  flex: 1 1 50%;
-}
+  @media ${breakpoints.sm} {
+    max-width: 50%;
+    flex: 1 1 50%;
+  }
 
-@media ${breakpoints.lg} {
-  max-width: 33.33%;
-  flex: 1 1 33.33%;
-}
-`
+  @media ${breakpoints.lg} {
+    max-width: 33.33%;
+    flex: 1 1 33.33%;
+  }
+`;
 export const CardContainer = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-`
+`;
 
 export const CardImgContainer = styled.div`
   display: flex;
@@ -51,9 +51,9 @@ export const CardImgContainer = styled.div`
     width: 70px;
     height: 70px;
   }
-`
+`;
 
-export const CardContentContainer = styled.div``
+export const CardContentContainer = styled.div``;
 
 export const CardName = styled.div`
   font-size: 16px;
@@ -61,12 +61,12 @@ export const CardName = styled.div`
   color: #121f3e;
   font-weight: 600;
   margin-bottom: 2px;
-`
+`;
 export const CardLinkWrapper = styled.div`
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
 export const CardLink = styled.a`
   font-size: 14px;
   line-height: 18px;
@@ -75,8 +75,9 @@ export const CardLink = styled.a`
   margin-bottom: 0px;
   text-decoration: none;
   cursor: pointer;
-  & :hover, & :focus {
+  & :hover,
+  & :focus {
     color: #d6d6d6;
     text-decoration: none;
   }
-`
+`;

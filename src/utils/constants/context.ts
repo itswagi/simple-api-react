@@ -5,11 +5,11 @@ export enum ActionType {
   SEARCHFULFILLED = 'search succeeded',
   EVENTSFULFILLED = 'events succeeded',
   REJECTED = 'failed',
-  EVENTTOGGLE = 'showEvents'
+  EVENTTOGGLE = 'showEvents',
 }
 
 export enum StatusEnum {
   SEARCH = 'search',
   EVENTS = 'events',
-  SHOWEVENTS = 'showEvents'
+  SHOWEVENTS = 'showEvents',
 }

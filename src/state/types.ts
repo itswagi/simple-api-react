@@ -1,58 +1,70 @@
-import { ReactNode } from "react";
-import { ActionType, StatusEnum } from "../utils/constants/context";
+import { ReactNode } from 'react';
+import { ActionType, StatusEnum } from '../utils/constants/context';
 
-export type AppProviderProps = { children: ReactNode }
+export type AppProviderProps = { children: ReactNode };
 
 interface StatusType {
-  search: ActionType
-  events: ActionType
+  search: ActionType;
+  events: ActionType;
 }
 
-interface ErrorType {
-  search: string | null | undefined
-}
+// interface ErrorType {
+//   search: string | null
+// }
 
 export interface VeuneInterface {
-    country: string;
-    city: string;
-    name: string;
+  country: string;
+  city: string;
+  name: string;
 }
 
 export interface EventsInterface {
-  id?: string;
-  datetime?: string;
-  venue?: VeuneInterface
+  id: string;
+  datetime: string;
+  venue: VeuneInterface;
 }
 
 interface StateDataType {
   search: {
-    name?: string
-    facebook_page_url?: string
-    image_url?: string
-  }
-  events?: EventsInterface[]
+    name?: string;
+    facebook_page_url?: string;
+    image_url?: string;
+  };
+  events: EventsInterface[];
+}
+
+interface ErrorType {
+  search?: string;
+  events?: string;
 }
 
 export interface State {
-  data: StateDataType
-  status: StatusType
-  error: ErrorType
+  data: StateDataType;
+  status: StatusType;
+  error: ErrorType;
 }
 
-interface ActionPayload {
-  events?: EventsInterface[]
-  search?: {
-    name?: string
-    facebook_page_url?: string
-    image_url?: string
-  }
+type EventsActionPayload = {
+  events: EventsInterface[];
+};
+
+type SeachActionPayload = {
+  search: {
+    name: string;
+    facebook_page_url: string;
+    image_url: string;
+  };
+};
+
+type ActionPayload = EventsActionPayload | SeachActionPayload;
+
+interface ActionTypeWithPayload {
+  type: ActionType;
+  status: StatusEnum;
+  payload?: ActionPayload;
+  error?: string;
 }
 
-export type Action = { 
-  type: ActionType,  
-  status: StatusEnum
-  payload?: ActionPayload
-  error?: string
-} 
+export type Action = ActionTypeWithPayload;
 
-export type Dispatch = (action: Action) => void
+export type Dispatch = (action: Action) => void;
