@@ -1,18 +1,8 @@
 import styled from 'styled-components';
 
 export const EventsResultContainer = styled.div`
-  /* animation: fadeIn 0.25s ease 1; */
-  animation-delay: 0.1s;
-  height: 0;
-  width: auto;
-  transition: height 1s;
-  overflow: hidden;
-  &.trans {
-    height: 500px;
-  }
-  &.height {
-    height: auto;
-  }
+  animation: fadeIn 0.25s ease 1;
+  width: 100%;
 `;
 
 export const EventsResultCardsRow = styled.div`
