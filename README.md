@@ -1,5 +1,9 @@
 # Getting Started with this Assignment
 
+## Deployed Version
+Access the deployed frontend on `https://kt-assignment.herokuapp.com`
+This is deployed on Heroku
+
 ## Running the Project
 
 1. Clone the repo and perform a `yarn install` to instal all package dependencies.
