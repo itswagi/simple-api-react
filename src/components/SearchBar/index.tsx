@@ -10,20 +10,19 @@ import { useForm } from 'react-hook-form';
 import { useApp } from '../../state/hooks';
 import { searchArtistAPI } from '../../state/api';
 import { ActionType } from '../../utils/constants/context';
-
-type Props = {
-  setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
-};
+import { useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 type FormData = {
   name: string;
 };
 
-export const SearchBar: React.FC<Props> = ({ setSearchTerm }) => {
+export const SearchBar: React.FC = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    getValues,
   } = useForm<FormData>();
   const {
     state: {
@@ -31,10 +30,33 @@ export const SearchBar: React.FC<Props> = ({ setSearchTerm }) => {
     },
     dispatch,
   } = useApp();
+  const [searchParams, setSearchParams] = useSearchParams();
   const onSubmit = (data: FormData) => {
-    if (search !== ActionType.LOADING) searchArtistAPI(dispatch, data);
-    setSearchTerm(data.name); // TODO: fullfilled move to
+    if (search !== ActionType.LOADING) {
+      searchArtistAPI(dispatch, data);
+    }
   };
+
+  useEffect(() => {
+    const name = searchParams.get('artist');
+    const searchedTerm = getValues('name');
+    if (name !== searchedTerm && search === ActionType.IDLE) {
+      name && searchArtistAPI(dispatch, { name: name });
+    }
+    if (search === ActionType.FULFILLED) {
+      if (getValues('name')) {
+        setSearchParams({ artist: getValues('name') });
+      }
+    }
+  }, [dispatch, getValues, search, searchParams, setSearchParams]);
+
+  // useEffect(() => {
+  //   const name = searchParams.get('artist');
+  //   const searchedTerm = getValues('name');
+  //   if (name !== searchedTerm && search === ActionType.IDLE) {
+  //     name && searchArtistAPI(dispatch, { name: name });
+  //   }
+  // }, [dispatch, getValues, search, searchParams, setValue]);
 
   return (
     <SearchBarContainer

@@ -22,10 +22,12 @@ export interface EventsInterface {
   id: string;
   datetime: string;
   venue: VeuneInterface;
+  artist_id: string;
 }
 
 interface StateDataType {
   search: {
+    id?: string;
     name?: string;
     facebook_page_url?: string;
     image_url?: string;

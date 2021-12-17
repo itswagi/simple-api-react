@@ -2,11 +2,23 @@ import styled from 'styled-components';
 import { breakpoints } from '../../../../utils/constants';
 
 export const SearchResultCardsCol = styled.div`
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   display: flex;
+  animation: fadeIn 0.4s ease 1;
   padding-right: 10px;
   padding-left: 10px;
   max-width: 100%;
   flex: 1 1 100%;
+  :hover {
+    transform: scale(1.025);
+  }
 
   @media ${breakpoints.sm} {
     max-width: 50%;
@@ -53,7 +65,11 @@ export const CardImgContainer = styled.div`
   }
 `;
 
-export const CardContentContainer = styled.div``;
+export const CardContentContainer = styled.div`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
 
 export const CardName = styled.div`
   font-size: 16px;

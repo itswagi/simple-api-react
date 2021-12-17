@@ -1,5 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useApp } from '../../state/hooks';
 import { ArtistCard } from '../cards/ArtistCard';
 import {
@@ -11,27 +10,33 @@ import {
 } from './styles';
 import { MdArrowBackIosNew } from 'react-icons/md';
 import { EventsResult } from '../EventsResult';
+import { ActionType } from 'src/utils/constants/context';
 
-type Props = {
-  searchTerm: string | null;
-};
-
-export const SearchResults: React.FC<Props> = ({ searchTerm }) => {
+export const SearchResults: React.FC = () => {
   const {
     state: {
       data: {
         search: { image_url, name, facebook_page_url },
       },
+      status: { search, events },
     },
   } = useApp();
   const [showBack, setShowBack] = useState<boolean>(false);
   const handleBackClick = () => {
     setShowBack(false);
   };
+  useEffect(() => {
+    console.log(showBack);
+  }, [showBack]);
+
+  if (search === ActionType.LOADING) {
+    return <SearchResultsContainer></SearchResultsContainer>;
+  }
+
   return (
     <>
       <SearchResultsContainer>
-        {showBack && (
+        {showBack && events === ActionType.FULFILLED && (
           <BackToResultsContainer onClick={handleBackClick}>
             <ArrowContainer>
               <MdArrowBackIosNew />
@@ -39,10 +44,8 @@ export const SearchResults: React.FC<Props> = ({ searchTerm }) => {
             Back to results
           </BackToResultsContainer>
         )}
-        {searchTerm && !showBack && (
-          <SearchResultsHeading>
-            Result found for '{searchTerm}'
-          </SearchResultsHeading>
+        {search === ActionType.FULFILLED && !showBack && (
+          <SearchResultsHeading>Result found for '{name}'</SearchResultsHeading>
         )}
         <SearchResultCardsRow>
           {name && facebook_page_url && image_url && (

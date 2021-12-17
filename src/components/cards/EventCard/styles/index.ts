@@ -7,6 +7,9 @@ export const EventsResultCardsCol = styled.div`
   padding-left: 10px;
   max-width: 100%;
   flex: 1 1 100%;
+  :hover {
+    transform: scale(1.025);
+  }
 
   @media ${breakpoints.sm} {
     max-width: 50%;
@@ -29,7 +32,7 @@ export const EventResultsCard = styled.div`
   width: 100%;
   background-color: #fff;
   border: 1px solid #fff;
-  box-shadow: 0px 1px 50px rgb(0 0 0 / 8%);
+  box-shadow: 0px 1px 10px rgb(0 0 0 / 8%);
   padding: 24px 20px;
   margin-top: 20px;
   overflow: hidden;

@@ -38,6 +38,7 @@ export const SearchWrapper = styled.div`
 export const SearchBarWrapper = styled.div`
   max-width: 500px;
   width: 100%;
+  padding: 0 5px;
 `;
 
 export const EventsWrapper = styled.div`

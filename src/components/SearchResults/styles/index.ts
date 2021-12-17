@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SearchResultsContainer = styled.div`
-  margin-top: 40px;
+  padding: 40px 5px 0 5px;
   width: 100%;
 `;
 
@@ -34,8 +34,16 @@ export const SearchResultCardsRow = styled.div`
 `;
 export const BackToResultsContainer = styled.div`
   display: flex;
+  font-size: 20px;
+  line-height: 26px;
+  color: #121f3e;
+  font-weight: 500;
+  margin-bottom: 0px;
 `;
 
 export const ArrowContainer = styled.div`
   margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

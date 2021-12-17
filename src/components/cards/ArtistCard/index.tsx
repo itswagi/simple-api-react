@@ -25,10 +25,20 @@ export const ArtistCard: React.FC<Props> = ({
   socialLink,
   setShowBack,
 }) => {
-  const { dispatch } = useApp();
+  const {
+    state: {
+      data: {
+        search: { id },
+        events,
+      },
+    },
+    dispatch,
+  } = useApp();
   const handleArtistCardClick = async () => {
     setShowBack(true);
-    await fetchArtistEventsAPI(dispatch, { name: name.toLowerCase() });
+    if (id !== events[0]?.artist_id) {
+      fetchArtistEventsAPI(dispatch, { name: name.toLowerCase() });
+    }
   };
 
   return (
@@ -41,7 +51,9 @@ export const ArtistCard: React.FC<Props> = ({
           <CardContentContainer>
             <CardName>{name}</CardName>
             <CardLinkWrapper>
-              <CardLink>{socialLink}</CardLink>
+              <CardLink href={socialLink} target="_blank">
+                {socialLink}
+              </CardLink>
             </CardLinkWrapper>
           </CardContentContainer>
         </CardContainer>
