@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { AxiosResponse } from 'axios';
 import { server } from '../utils/api';
 import { ActionType, StatusEnum } from '../utils/constants/context';

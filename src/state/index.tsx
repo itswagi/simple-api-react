@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { createContext, useReducer } from 'react';
 import { ActionType } from '../utils/constants/context';
 import { appReducer } from './reducer';

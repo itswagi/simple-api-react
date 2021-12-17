@@ -16,6 +16,7 @@
   "ignorePatterns": ["*/__test__", "reportWebVitals.ts"],
   "rules": {
     "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/display-name": 0,
     "react/prop-types": 0,
     "no-console": "off",

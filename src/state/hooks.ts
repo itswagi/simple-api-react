@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { useContext } from 'react';
 import { AppContext } from '.';
 
